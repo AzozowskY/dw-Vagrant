@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "playbooks/clone_roles.yml"
     ansible.extra_vars = {
-      git_repository: "https://github.com/AzozowskY/dw-Ansible_roles",
+      git_repository: "https://github.com/AzozowskY/dw-Ansible_roles.git",
       git_branch: "main"
     }
   end
@@ -28,8 +28,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "playbooks/infrastructure.yml"
     ansible.extra_vars = {
-      git_repository: "https://github.com/AzozowskY/dw-panda-Infrastructure",
-      git_branch: "jenkins_agent"
+      git_repository: "https://github.com/AzozowskY/dw-panda-Infrastructure.git",
+      git_branch: "main"
     }
   end
 
